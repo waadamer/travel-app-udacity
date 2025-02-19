@@ -1,0 +1,123 @@
+$font-color: #b39ddb;  
+$color: #7e57c2;      
+$background-color: #d1c4e9; 
+
+body {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 800px;
+  height: 85%;
+  padding: 30px;
+  border-radius: 30px;
+  color: $font-color;
+  box-shadow: -1px 0px 5px 0px #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  color: $font-color;
+  font-size: 2rem;
+}
+
+.components {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.inputs {
+  flex: 1;
+  padding: 10px;
+  margin-right: 20px; 
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ac8bc4;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: 1px solid #98588a;
+  border-color: $color;
+}
+
+[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: $color;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+[type="submit"]:hover {
+  background-color: #5f1c57;
+  transform: scale(1.05);
+}
+
+.outputs {
+  flex: 1;
+  padding: 10px;
+}
+
+h3 {
+  color: #7e57c2; 
+}
+
+.weather img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.weather img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  body {
+    height: auto;
+  }
+
+  .components {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .inputs, .outputs {
+    width: 100%;
+    text-align: center;
+  }
+
+  input {
+    width: 80%;
+  }
+}
